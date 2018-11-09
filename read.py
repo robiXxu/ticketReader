@@ -14,7 +14,7 @@ args = vars(argp.parse_args())
 
 imagesPath = "images/"
 outPath = "out/"
-preprocess = "blur"
+preprocess = "thresh"
 
 allowedImages = ["jpeg", "jpg", "png", "bmp"]
 ignoredFiles = [".DS_Store", ".gitkeep"]
@@ -37,7 +37,7 @@ def extract(imageName, path, preprocess):
     gray = cv2.medianBlur(gray, 3)
   filename = ".tmp/{}.png".format(uuid.uuid4())
   cv2.imwrite(filename, gray)
-  text = pytesseract.image_to_string(Image.open(filename))
+  text = pytesseract.image_to_string(Image.open(filename), lang='eng')
   os.remove(filename)
   return text.encode("utf-8")
 
