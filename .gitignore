@@ -1,0 +1,13 @@
+.history
+.vscode
+.tmp
+
+.DS_Store
+.DS_STORE
+
+images/*.png
+images/*.jpg
+images/*.jpeg
+images/*.bmp
+
+out/*.txt
