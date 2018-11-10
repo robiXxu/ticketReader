@@ -1,6 +1,6 @@
 # Ticket Reader
 
-A OCR attempt to make a ticket (fiscal) reader using open cv & tesseract
+A attempt to make a ticket (fiscal) reader using open cv & tesseract (OCR)
 
 Not working on transparent images.
 
